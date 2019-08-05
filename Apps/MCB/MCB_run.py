@@ -1,4 +1,5 @@
 import subprocess
+import os
 import random
 import time
 import csv
@@ -13,7 +14,7 @@ def run_cmd(cmd):
 	status = True
 	start = time.time()
 	try:
-		subprocess.run(cmd,shell=True,timeout=36000)
+		os.system(cmd)
 		end = time.time()
 		return end-start,status
 	except:
@@ -31,11 +32,12 @@ def save_data(line,csv_path):
 #run flow control
 def run(params_dic,csv_path):
 	
+	'''
 	headers = ["nproc","nx","ny","xmax","ymax","xr","yr","np","exec_time"]
 	with open(csv_path,"w",newline="") as f:
 		writer = csv.writer(f)
 		writer.writerow(headers)
-
+	'''
 	for i in range(params_dic["n_group"]):
 		#generate MCB parameters
 		nx = random.randint(params_dic["min_nx"],params_dic["max_nx"])

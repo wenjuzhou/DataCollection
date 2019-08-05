@@ -26,8 +26,12 @@
 
 ## Modules
 
-module load intel/2019.update1 && module load intelmpi/2019.update1 && module load python/3.6.1
+module load intel/2019.update1 && module load intelmpi/2019.update1 && module load python/3.6.1(only cross nodes:in largeopa >28)
 
 ## Data
 
 runtime data in ../../Data/AppsData/MCB/MCB-QUEUE-MINPROCESS_MAXPROCESS_INTERVALPROCESS-NGROUP_NPERGROUP
+
+## Log
+
+running log in ../../Log/AppsLog/MCB/MCB-QUEUE-MINPROCESS_MAXPROCESS_INTERVALPROCESS-NGROUP_NPERGROUP(.err&&.log)
