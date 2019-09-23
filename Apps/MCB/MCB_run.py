@@ -48,8 +48,8 @@ def run(params_dic,csv_path):
 		yr = random.uniform(params_dic["min_yr"],params_dic["max_yr"])
 		np = random.randint(params_dic["min_np"],params_dic["max_np"])
 		#random select number of process
-		nprocs = random.sample(params_dic["nproc_list"],params_dic["n_pergroup"])
-		
+		nprocs = list(random.sample(params_dic["nproc_list"],params_dic["n_pergroup"]))
+		nprocs.sort()
 		#generate and run
 		for nproc in nprocs:
 			cmd = generate_cmd(nx,ny,xmax,ymax,xr,yr,np,nproc)
@@ -83,7 +83,7 @@ def main():
 	}
 	csv_path = "/home/cs/ustczwj/workspace/Data/AppsData/MCB/MCB-{}-{}_{}_{}-{}_{}.csv".format(sys.argv[6],sys.argv[1],sys.argv[2],sys.argv[3],sys.argv[4],sys.argv[5])
 	run(params_dic,csv_path)
-	print(params_dic["nproc_list"])
+	#print(params_dic["nproc_list"])
 	
 
 if __name__ == "__main__":
