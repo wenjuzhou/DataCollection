@@ -24,7 +24,7 @@ def main():
     gap_nproc=int(sys.argv[3])
     nproc_list=list(range(min_nproc,max_nproc+1,gap_nproc))
     num_group=int(sys.argv[4])
-    sub_path="random_input\\MCB-random-{}-{}-{}-{}.csv".format(min_nproc,max_nproc,gap_nproc,num_group)
+    sub_path="input\\MCB-random-{}-{}-{}-{}.csv".format(min_nproc,max_nproc,gap_nproc,num_group)
     path="{}\\{}".format(DIR,sub_path)
     generate_random_input(nproc_list,num_group,path)
 if __name__ == "__main__":
