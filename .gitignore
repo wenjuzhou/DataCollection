@@ -1,2 +1,5 @@
-# exclude Log
+#ignore log folder
 Log
+#ignore .vscode folder
+*.vscode/
+*__pycache__
