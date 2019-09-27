@@ -38,7 +38,7 @@ def run(input_path,output_path,beg,end):
 	for i in range(beg,end+1):
 		#print(all_inputs[i-1])
 		cmd=generate_cmd(all_inputs[i])
-		print(cmd)
+		#print(cmd)
 		exec_time,status = run_cmd(cmd)
 		if status:
 			line = all_inputs[i]+[exec_time]
@@ -50,7 +50,7 @@ def main():
 	output_dir="../../Data/AppsData/MCB"
 	sub_path=sys.argv[1]
 	input_path="{}/{}".format(input_dir,sub_path)
-	output_path="{}/{}".format(output_dir,sub_path)
+	output_path="{}/{}-{}-{}".format(output_dir,sys.argv[2],sys.argv[3],sub_path)
 	beg=int(sys.argv[2])
 	end=int(sys.argv[3])
 	run(input_path,output_path,beg,end)
