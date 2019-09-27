@@ -7,7 +7,7 @@ import sys
 
 #generate running cmd according in-parameters
 def generate_cmd(params):
-	cmd = "mpijob -n {} /home/cs/ustczwj/applications/mcb-20130723/src/MCBenchmark.exe --nZonesX={} --nZonesY={} --xDim={} --yDim={} --xSource={} --xSource={} --numParticles={}".format(params[0],params[1],params[2],params[3],params[4],params[5],params[6],params[7])
+	cmd = "mpijob -n {} /home/cs/ustczwj/applications/mcb-20130723/src/MCBenchmark.exe --nZonesX={} --nZonesY={} --xDim={} --yDim={} --xSource={} --xSource={} --numParticles={}".format(params[7],params[0],params[1],params[2],params[3],params[4],params[5],params[6])
 	return cmd
 
 #run a case get running time
@@ -38,6 +38,7 @@ def run(input_path,output_path,beg,end):
 	for i in range(beg,end+1):
 		#print(all_inputs[i-1])
 		cmd=generate_cmd(all_inputs[i])
+		print(cmd)
 		exec_time,status = run_cmd(cmd)
 		if status:
 			line = all_inputs[i]+[exec_time]

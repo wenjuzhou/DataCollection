@@ -3,9 +3,6 @@ import sys
 import os
 import random
 
-DIR=os.getcwd()
-print(DIR)
-
 params_dic = {
     "min_nx" : 100,
     "max_nx" : 1000,
