@@ -35,7 +35,7 @@ def run(input_path,output_path,beg,end):
 		csv_reader=csv.reader(f)
 		for row in csv_reader:
 			all_inputs.append(row)
-	for i in range(beg,end+1):
+	for i in range(beg-1,end):
 		#print(all_inputs[i-1])
 		cmd=generate_cmd(all_inputs[i])
 		#print(cmd)

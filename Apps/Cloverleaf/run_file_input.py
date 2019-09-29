@@ -14,7 +14,7 @@ class Cloverleaf_executor(object):
 
     def executor(self):
         all_inputs = self.read_input()
-        for i in range(self.beg,self.end+1):
+        for i in range(self.beg-1,self.end):
             cmd =self.generate_cmd(all_inputs[i])
             exec_time,status = self.run_cmd(cmd)
             if status:
