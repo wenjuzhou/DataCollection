@@ -14,7 +14,7 @@ class Cloverleaf_executor(object):
 
     def executor(self):
         all_inputs = self.read_input()
-        for i in range(self.beg,self.end+1):
+        for i in range(self.beg-1,self.end):
             cmd =self.generate_cmd(all_inputs[i])
             exec_time,status = self.run_cmd(cmd)
             if status:
@@ -41,7 +41,7 @@ class Cloverleaf_executor(object):
         status = True
         start = time.time()
         try:
-            #subprocess.run(cmd,shell=True,timeout=3600)
+            subprocess.run(cmd,shell=True,timeout=3600)
             end = time.time()
             return end-start,status
         except:
@@ -55,11 +55,11 @@ class Cloverleaf_executor(object):
 
 def main():
     input_dir = "{}/input".format(os.getcwd())
-    output_dir = "../../Data/Cloverleaf/"
+    output_dir = "../../Data/AppsData/Cloverleaf/"
     filename = sys.argv[1]
     beg = int(sys.argv[2])
     end = int(sys.argv[3])
-    input_path = "{}\\{}".format(input_dir,filename)
+    input_path = "{}/{}".format(input_dir,filename)
     output_path = "{}/{}-{}-{}".format(output_dir,beg,end,filename)
     executor_instance = Cloverleaf_executor(input_path,output_path,beg,end)
     executor_instance.executor()

@@ -3,17 +3,17 @@
  state 1 density=0.2 energy=1.0
  state 2 density=1.0 energy=2.5 geometry=rectangle xmin=0.0 xmax=5.0 ymin=0.0 ymax=5.0
 
- x_cells=509
- y_cells=1402
+ x_cells=1124
+ y_cells=1327
 
  xmin=0.0
  ymin=0.0
- xmax=9.469667542632521
- ymax=2.5339581662901947
+ xmax=0.17988427656035888
+ ymax=7.096061459283601
 
  initial_timestep=0.04
  timestep_rise=1.5
  max_timestep=0.04
- end_time=10.828323304462204
+ end_time=29.170522068967333
 
 *endclover
