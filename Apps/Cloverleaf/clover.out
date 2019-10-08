@@ -1,0 +1,32 @@
+ Reading input file
+ 
+ Reading specification for state            1
+ 
+            state density   0.2000E+00
+             state energy   0.1000E+01
+ 
+ Reading specification for state            2
+ 
+            state density   0.1000E+01
+             state energy   0.2500E+01
+ state geometry rectangular
+               state xmin   0.0000E+00
+               state xmax   0.5000E+01
+               state ymin   0.0000E+00
+               state ymax   0.5000E+01
+ 
+                   x_cells        1124
+                   y_cells        1327
+                      xmin  0.0000E+00
+                      ymin  0.0000E+00
+                      xmax  0.1799E+00
+                      ymax  0.7096E+01
+         initial_timestep   0.4000E-01
+             timestep_rise  0.1500E+01
+              max_timestep  0.4000E-01
+                  end_time  0.2917E+02
+ 
+     Using Fortran Kernels
+ 
+ Input read finished.
+ 
