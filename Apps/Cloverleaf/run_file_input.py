@@ -45,6 +45,7 @@ class Cloverleaf_executor(object):
             end = time.time()
             return end-start,status
         except:
+            end = time.time()
             status = False
             return end-start,status
 
