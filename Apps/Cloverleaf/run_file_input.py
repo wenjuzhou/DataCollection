@@ -20,6 +20,9 @@ class Cloverleaf_executor(object):
             if status:
                 line = all_inputs[i] + [exec_time]
                 self.save_data(line)
+            else:
+                line = all_inputs[i] + [1000000]
+                self.save_data(line)
 
     def read_input(self):
         all_inputs  =[]
