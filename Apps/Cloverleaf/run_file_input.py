@@ -44,7 +44,7 @@ class Cloverleaf_executor(object):
         status = True
         start = time.time()
         try:
-            subprocess.run(cmd,shell=True,timeout=3600)
+            subprocess.run(cmd,shell=True,timeout=7200)
             end = time.time()
             return end-start,status
         except:
