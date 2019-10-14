@@ -6,9 +6,9 @@ import os
 class Cloverleaf_generator(object):
     def __init__(self,nproc_list,n_group,path,way):
         self.params_dict = {
-            "min_xcells" : 500,
+            "min_xcells" : 1000,
             "max_xcells" : 1500,
-            "min_ycells" : 500,
+            "min_ycells" : 1000,
             "max_ycells" : 1500,
             "min_xmax" : 0.1,
             "max_xmax" : 10.0,
@@ -65,6 +65,7 @@ class Cloverleaf_generator(object):
         self.generator_way[self.way](params_list,path)
 
 
+# python run generate_input.py group/random 16 512 16 100 
 def main():
     way = sys.argv[1]
     min_nproc=int(sys.argv[2])
