@@ -3,3 +3,4 @@ Log
 #ignore .vscode folder
 *.vscode/
 *__pycache__
+*.swp
