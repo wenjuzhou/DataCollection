@@ -15,16 +15,16 @@
                state ymin   0.0000E+00
                state ymax   0.5000E+01
  
-                   x_cells        1222
-                   y_cells        1253
+                   x_cells        1429
+                   y_cells        1490
                       xmin  0.0000E+00
                       ymin  0.0000E+00
-                      xmax  0.8406E+00
-                      ymax  0.1436E+00
+                      xmax  0.6328E+01
+                      ymax  0.7117E+01
          initial_timestep   0.4000E-01
              timestep_rise  0.1500E+01
               max_timestep  0.4000E-01
-                  end_time  0.2580E+02
+                  end_time  0.1621E+02
  
      Using Fortran Kernels
  
